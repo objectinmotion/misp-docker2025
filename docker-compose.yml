@@ -41,7 +41,7 @@ services:
       timeout: 10s
 
   misp:
-    image: ostefano/misp-docker:core-latest
+    image: objectinmotion/misp-docker:core-latest
     build:
       context: server/.
       args:
@@ -95,7 +95,7 @@ services:
       - "MYSQL_DATABASE=${MYSQL_DATABASE:-misp}"
 
   misp-modules:
-    image: ostefano/misp-docker:modules-latest
+    image: objectinmotion/misp-docker:modules-latest
     build:
       context: modules/.
       args:
