@@ -256,8 +256,7 @@ services:
       - "REDIS_PORT=${REDIS_PORT:-6379}"
       - "REDIS_PW=${REDIS_PASSWORD:-redispassword}"
     depends_on:
-      redis:
-        condition: service_healthy
+      -redis
     healthcheck:
       test: "/bin/bash -c '</dev/tcp/localhost/6666'"
       interval: 2s
