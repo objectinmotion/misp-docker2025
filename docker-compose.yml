@@ -41,7 +41,7 @@ services:
       timeout: 10s
 
   misp:
-    image: ocoolacid/misp-docker:core-latest
+    image: coolacid/misp-docker:core-latest
     build:
       context: server/.
       args:
